@@ -74,10 +74,11 @@ plugins=(
   nvm
   git
   zsh-autosuggestions
-  zsh-completions
   zsh-history-substring-search
   zsh-syntax-highlighting
 )
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,4 +118,4 @@ export HOMEBREW_NO_ENV_HINTS=FALSE
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # Uncomment this (and the first line) to profile
-zprof > ~/Desktop/zprof.log
+# zprof > ~/Desktop/zprof.log
