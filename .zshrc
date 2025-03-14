@@ -112,7 +112,7 @@ export PATH="$PATH:/Users/zflauaus/Library/Python/3.9/bin"
 alias cleanbrew='brew update && brew upgrade && brew cleanup; brew doctor; brew missing; echo "CleanBrew Complete"'
 
 # Disable Homebrew hints
-export HOMEBREW_NO_ENV_HINTS=FALSE
+export HOMEBREW_NO_ENV_HINTS=
 
 # Add Composer global bin directory.
 export PATH="$PATH:$HOME/.composer/vendor/bin"
