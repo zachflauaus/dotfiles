@@ -1,8 +1,8 @@
 [user]
-  name = Jeff Geerling
-  email = geerlingguy@mac.com
+  name = Zach Flauaus
+  email = zflauaus@wustl.edu
 [core]
-  editor = vi
+  editor = nano
   excludesfile = ~/.gitignore
   autocrlf = input
 [color]
@@ -11,15 +11,15 @@
   interactive = auto
   status = auto
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [web]
-  browser = google-chrome
+  browser = firefox
 [credential]
   helper = osxkeychain
 [push]
   default = simple
 [merge]
-  tool = kdiff3
+  tool = diffmerge
 [difftool]
   prompt = false
 [alias]
