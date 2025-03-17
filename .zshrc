@@ -74,10 +74,11 @@ plugins=(
   nvm
   git
   zsh-autosuggestions
-  zsh-completions
   zsh-history-substring-search
   zsh-syntax-highlighting
 )
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,10 +112,10 @@ export PATH="$PATH:/Users/zflauaus/Library/Python/3.9/bin"
 alias cleanbrew='brew update && brew upgrade && brew cleanup; brew doctor; brew missing; echo "CleanBrew Complete"'
 
 # Disable Homebrew hints
-export HOMEBREW_NO_ENV_HINTS=FALSE
+export HOMEBREW_NO_ENV_HINTS=
 
 # Add Composer global bin directory.
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # Uncomment this (and the first line) to profile
-zprof > ~/Desktop/zprof.log
+# zprof > ~/Desktop/zprof.log
