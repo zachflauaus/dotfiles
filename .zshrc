@@ -117,5 +117,8 @@ export HOMEBREW_NO_ENV_HINTS=
 # Add Composer global bin directory.
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+export PATH="/opt/homebrew/opt/php@8.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.3/sbin:$PATH"
+
 # Uncomment this (and the first line) to profile
-# zprof > ~/Desktop/zprof.log
+#zprof > ~/Desktop/zprof-$(date +%d.%m.%y-%H:%M:%S).log
