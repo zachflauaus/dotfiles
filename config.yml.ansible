@@ -1,0 +1,189 @@
+######
+# Accompanies the mac-dev-playbook repo.
+######
+---
+configure_dotfiles: true
+configure_terminal: false
+configure_osx: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - Mail
+  - Messages
+  - Numbers
+  - Maps
+  - Photos
+  - FaceTime
+  - Calendar
+  - Contacts
+  - Reminders
+  - Notes
+  - Freeform
+  - TV
+  - Music
+  - News
+  - Keynote
+  - Pages
+  - Podcasts
+  - 'App Store'
+  - 'iPhone Mirroring'
+
+dotfiles_repo: https://github.com/zachflauaus/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+dockitems_persist:
+- name: "Safari"
+  path: "/Applications/Safari.app"
+  pos: 1
+- name: "Firefox"
+  path: "/Applications/Firefox.app"
+  pos: 2
+- name: "Microsoft Edge"
+  path: "/Applications/Microsoft Edge.app"
+  pos: 3
+- name: "Microsoft Outlook"
+  path: "/Applications/Microsoft Outlook.app"
+  pos: 4
+- name: "Microsoft Teams"
+  path: "/Applications/Microsoft Teams.app"
+  pos: 5
+- name: "Zoom"
+  path: "/Applications/Zoom.app"
+  pos: 6
+- name: "Figma"
+  path: "/Applications/Figma.app"
+  pos: 7
+- name: "iTerm"
+  path: "/Applications/iTerm.app"
+  pos: 8
+- name: "Visual Studio Code"
+  path: "/Applications/Visual Studio Code.app"
+  pos: 9
+- name: "Stickies"
+  path: "/Applications/Stickies.app"
+  pos: 10
+- name: "Spotify"
+  path: "/Applications/Spotify.app"
+  pos: 11
+- name: "Transmit"
+  path: "/Applications/Transmit.app"
+  pos: 12
+- name: "System Settings"
+  path: "/Applications/System Settings.app"
+  pos: 13
+
+configure_sudoers: false
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - autoconf
+  - bash-completion
+  - php@8.3
+  - composer
+  - ddev/ddev/ddev
+  - docker
+  - ffmpeg
+  - fzf
+  - imagemagick
+  - git
+  - lima
+  - node
+  - nvm
+  - nss
+  - pantheon-systems/external/terminus
+  - powerlevel10k
+  - pyenv
+  - terminus
+  - wget
+  - zsh-autosuggestions
+  - zsh-completions
+  - zsh-history-substring-search
+  - zsh-syntax-highlighting
+
+homebrew_taps: []
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password
+  - adobe-creative-cloud
+  - alfred
+  - alt-tab
+  - diffmerge
+  - firefox
+  - figma
+  - font-ibm-plex-sans
+  - font-libre-baskerville
+  - font-jetbrains-mono
+  - font-menlo-for-powerline
+  - google-chrome
+  - handbrake-app
+  - iina
+  - imageoptim
+  - integrity
+  - istat-menus
+  - iterm2
+  - jordanbaird-ice
+  - keyboardcleantool
+  - klogg
+  - microsoft-auto-update
+  - microsoft-edge
+  - monitorcontrol
+  - nova
+  - setapp
+  - spotify
+  - steermouse
+  - transmit
+  - utm
+  - visual-studio-code
+  - vlc
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - { id: 1365531024, "1Blocker" }
+  - { id: 1569813296, "1Password for Safari" }
+  - { id: 1091189122, "Bear" }
+  - { id: 417375580, "BetterSnapTool" }
+  - { id: 1487937127, "Craft" }
+  - { id: 411643860, "DaisyDisk" }
+  - { id: 1435957248, "Drafts" }
+  - { id: 288419283, "RadarScope" }
+  - { id: 497799835, "Xcode" }
+  - { id: 447661441, "Xscope" } 
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the
+# required package managers are installed,
+# eg. through homebrew.
+composer_packages:
+  - { name: dealerdirect/phpcodesniffer-composer-installer }
+  - { name: squizlabs/php_codesniffer }
+  - { name: wp-coding-standards/wpcs }
+
+gem_packages: []
+
+npm_packages: []
+
+# ZF Note: we use urllib3 beacuse....of some script
+# throwing errors. Though I forget which one.
+pip_packages:
+  - { name: pandas, state: present, version: "^1.5.1" }
+  - { name: pyairtable, state: present, version: "^3.0.2" }
+  - { name: urllib3, state: present, version: "1.26.12" }
+
+configure_sublime: false
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
